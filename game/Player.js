@@ -39,7 +39,7 @@ class Player extends Phaser.GameObjects.Sprite {
 
         config = {
             key: 'stand-down',
-            frames: scene.anims.generateFrameNumbers('player', {start: 0, end: 0}),
+            frames: scene.anims.generateFrameNumbers('player', {start: 6, end: 6}),
             frameRate: 15,
             repeat: -1
         };
@@ -47,7 +47,7 @@ class Player extends Phaser.GameObjects.Sprite {
 
         config = {
             key: 'stand-right',
-            frames: scene.anims.generateFrameNumbers('player', {start: 4, end: 4}),
+            frames: scene.anims.generateFrameNumbers('player', {start: 3, end: 3}),
             frameRate: 15,
             repeat: -1
         };
@@ -55,7 +55,7 @@ class Player extends Phaser.GameObjects.Sprite {
 
         config = {
             key: 'stand-up',
-            frames: scene.anims.generateFrameNumbers('player', {start: 8, end: 8}),
+            frames: scene.anims.generateFrameNumbers('player', {start: 0, end: 0}),
             frameRate: 15,
             repeat: -1
         };
@@ -64,7 +64,7 @@ class Player extends Phaser.GameObjects.Sprite {
 
         var config = {
             key: 'walk-down',
-            frames: scene.anims.generateFrameNumbers('player', {start: 0, end: 3}),
+            frames: scene.anims.generateFrameNumbers('player', {start: 6, end: 8}),
             frameRate: 15,
             repeat: -1
         };
@@ -72,7 +72,7 @@ class Player extends Phaser.GameObjects.Sprite {
 
         var config = {
             key: 'walk-right',
-            frames: scene.anims.generateFrameNumbers('player', {start: 4, end: 7}),
+            frames: scene.anims.generateFrameNumbers('player', {start: 3, end: 5}),
             frameRate: 15,
             repeat: -1
         };
@@ -80,7 +80,7 @@ class Player extends Phaser.GameObjects.Sprite {
 
         var config = {
             key: 'walk-up',
-            frames: scene.anims.generateFrameNumbers('player', {start: 8, end: 11}),
+            frames: scene.anims.generateFrameNumbers('player', {start: 0, end: 2}),
             frameRate: 15,
             repeat: -1
         };
