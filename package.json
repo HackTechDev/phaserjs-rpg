@@ -1,0 +1,24 @@
+{
+  "name": "phaser3-room-change",
+  "description": "A simple room change technique using Phaser3 and Tiled.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deplicator/phaser3-room-change.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deplicator/phaser3-room-change/issues"
+  },
+  "homepage": "https://github.com/deplicator/phaser3-room-change#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

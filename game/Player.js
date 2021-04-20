@@ -32,7 +32,7 @@ class Player extends Phaser.GameObjects.Sprite {
 
         this.keys = scene.input.keyboard.addKeys('W,S,A,D,UP,LEFT,RIGHT,DOWN,SPACE');
 
-        this.lastAnim = null;﻿
+        this.lastAnim = null;
         this.vel = 200;
         this.onStairs = false;
         this.direction = 'down';
@@ -103,7 +103,7 @@ class Player extends Phaser.GameObjects.Sprite {
         // standing
         let currentDirection = this.direction;
         if (this.direction === 'left') { currentDirection = 'right'; } //account for flipped sprite
-        animationName ﻿= 'stand-' + currentDirection;
+        animationName = 'stand-' + currentDirection;
 
         // all the ways the player can move.
         let left  = this.keys.A.isDown || this.keys.LEFT.isDown  || this.scene.gamepad && this.scene.gamepad.left;
