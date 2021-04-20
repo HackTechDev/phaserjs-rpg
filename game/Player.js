@@ -121,13 +121,6 @@ class Player extends Phaser.GameObjects.Sprite {
         // standing
         let currentDirection = this.direction;
 
-   
-        /*    
-        if (this.direction === 'left') { 
-            currentDirection = 'right'; 
-        } //account for flipped sprite
-        */
-
         animationName = 'stand-' + currentDirection;
         
         // all the ways the player can move.
@@ -142,12 +135,10 @@ class Player extends Phaser.GameObjects.Sprite {
                 this.direction = 'left';
                 this.body.setVelocityX(-this.vel);
                 animationName = "walk-left";
-                //this.setFlipX(false);
             } else if (right) {
                 this.direction = 'right';
                 this.body.setVelocityX(this.vel);
                 animationName = "walk-right";
-                //this.setFlipX(false);
             }
 
             if (up) {

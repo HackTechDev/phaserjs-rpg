@@ -55,7 +55,7 @@ class Level extends Phaser.Scene {
 
         // Setup things in this level.
         this.rooms = [];
-        this.stairs = this.physics.add.group();﻿
+        this.stairs = this.physics.add.group();
 
         // Loop through all the objects.
         this.map.findObject('Objects', function(object) {
@@ -86,7 +86,7 @@ class Level extends Phaser.Scene {
         }, null, this);
 
         // start camera
-        this.cameras.main.setZoom(2.0);
+        this.cameras.main.setZoom(1.0);
 
         // Set first room boundaries.
         this.cameras.main.setBounds(this.rooms[this.player.currentRoom].x,
