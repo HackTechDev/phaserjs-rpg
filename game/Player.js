@@ -33,7 +33,7 @@ class Player extends Phaser.GameObjects.Sprite {
         this.keys = scene.input.keyboard.addKeys('W,S,A,D,UP,LEFT,RIGHT,DOWN,SPACE');
 
         this.lastAnim = null;
-        this.vel = 200;
+        this.vel = 50;
         this.onStairs = false;
         this.direction = 'down';
 
@@ -52,6 +52,15 @@ class Player extends Phaser.GameObjects.Sprite {
             repeat: -1
         };
         scene.anims.create(config);
+
+        config = {
+            key: 'stand-left',
+            frames: scene.anims.generateFrameNumbers('player', {start: 9, end: 9}),
+            frameRate: 15,
+            repeat: -1
+        };
+        scene.anims.create(config);
+
 
         config = {
             key: 'stand-up',
@@ -86,6 +95,15 @@ class Player extends Phaser.GameObjects.Sprite {
         };
         scene.anims.create(config);
 
+        var config = {
+            key: 'walk-left',
+            frames: scene.anims.generateFrameNumbers('player', {start: 9, end: 11}),
+            frameRate: 15,
+            repeat: -1
+        };
+        scene.anims.create(config);
+
+
     }
 
     /**
@@ -102,9 +120,16 @@ class Player extends Phaser.GameObjects.Sprite {
 
         // standing
         let currentDirection = this.direction;
-        if (this.direction === 'left') { currentDirection = 'right'; } //account for flipped sprite
-        animationName = 'stand-' + currentDirection;
 
+   
+        /*    
+        if (this.direction === 'left') { 
+            currentDirection = 'right'; 
+        } //account for flipped sprite
+        */
+
+        animationName = 'stand-' + currentDirection;
+        
         // all the ways the player can move.
         let left  = this.keys.A.isDown || this.keys.LEFT.isDown  || this.scene.gamepad && this.scene.gamepad.left;
         let right = this.keys.D.isDown || this.keys.RIGHT.isDown || this.scene.gamepad && this.scene.gamepad.right;
@@ -116,13 +141,13 @@ class Player extends Phaser.GameObjects.Sprite {
             if (left) {
                 this.direction = 'left';
                 this.body.setVelocityX(-this.vel);
-                animationName = "walk-right";
-                this.setFlipX(true);
+                animationName = "walk-left";
+                //this.setFlipX(false);
             } else if (right) {
                 this.direction = 'right';
                 this.body.setVelocityX(this.vel);
                 animationName = "walk-right";
-                this.setFlipX(false);
+                //this.setFlipX(false);
             }
 
             if (up) {
